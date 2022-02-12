@@ -1,0 +1,8 @@
+If you getting the error when compile :            
+            net.cpp:60:1: error: reference to ‘array’ is ambiguous
+            array<int, THREAD_MAX> vnThreadsRunning;
+            
+            Edit your net.cpp file with the follow command mostly in line 57
+            
+-            array<int, THREAD_MAX> vnThreadsRunning;
++            boost::array<int, THREAD_MAX> vnThreadsRunning;
